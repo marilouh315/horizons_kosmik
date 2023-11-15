@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://6yxe46dlidei"]
+[gd_scene load_steps=5 format=3 uid="uid://6yxe46dlidei"]
+
+[ext_resource type="PackedScene" uid="uid://cnj7y7flx2kfv" path="res://scenes/tilemap.tscn" id="1_ybu2i"]
+[ext_resource type="PackedScene" uid="uid://dvpxbs1u776b3" path="res://scenes/joueur_test.tscn" id="2_6clcb"]
+[ext_resource type="Script" path="res://scripts/joueur_test.gd" id="3_d232f"]
+[ext_resource type="PackedScene" uid="uid://uejh2e1d5q5q" path="res://scenes/camera_2d.tscn" id="4_c1xoa"]
 
 [node name="Niveau1" type="Node"]
+
+[node name="tilemap" parent="." instance=ExtResource("1_ybu2i")]
+position = Vector2(131, 3)
+
+[node name="joueur_test" parent="." instance=ExtResource("2_6clcb")]
+script = ExtResource("3_d232f")
+
+[node name="Camera2D" parent="." instance=ExtResource("4_c1xoa")]
+zoom = Vector2(1.5, 1.5)
+process_callback = 0
+drag_horizontal_enabled = true

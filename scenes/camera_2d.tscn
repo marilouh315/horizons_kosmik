@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://uejh2e1d5q5q"]
+
+[node name="Camera2D" type="Camera2D"]
+position_smoothing_enabled = true
