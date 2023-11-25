@@ -1023,6 +1023,6 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_gfy43")
 sources/0 = SubResource("TileSetAtlasSource_honrg")
 
-[node name="map_backdrop" type="TileMap"]
+[node name="map_decorations" type="TileMap"]
 tile_set = SubResource("TileSet_nsccw")
 format = 2

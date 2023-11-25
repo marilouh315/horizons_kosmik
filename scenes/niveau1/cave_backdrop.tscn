@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b8u8mr61ehxni"]
+
+[node name="cave_backdrop" type="TileMap"]
+format = 2
