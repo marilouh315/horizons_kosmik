@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://1d7p0x4p14om"]
+
+[ext_resource type="Script" path="res://gun.gd" id="1_bynjk"]
+[ext_resource type="Texture2D" uid="uid://d18hck3jyl7jo" path="res://assets/Pixel Adventure 1/Free/Main Characters/Virtual Guy/gun.png" id="1_tcr5k"]
+[ext_resource type="Texture2D" uid="uid://56d073dly5n3" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_000.png" id="3_ed6c6"]
+[ext_resource type="Texture2D" uid="uid://dpd58efsh3u51" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_001.png" id="4_bx1c5"]
+[ext_resource type="Texture2D" uid="uid://ng78fxuty2tx" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_002.png" id="5_4kx0i"]
+[ext_resource type="Texture2D" uid="uid://bhcjufqmnipw6" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_003.png" id="6_rrgxx"]
+[ext_resource type="Script" path="res://feu.gd" id="7_repa6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7q5k0"]
+size = Vector2(130.42, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tunhc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ed6c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bx1c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4kx0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rrgxx")
+}],
+"loop": false,
+"name": &"feu",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(0.829355, 0.759186)
+script = ExtResource("1_bynjk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(0.145683, 0.166667)
+texture = ExtResource("1_tcr5k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.619109, -1.3172)
+scale = Vector2(0.180388, 0.219533)
+shape = SubResource("RectangleShape2D_7q5k0")
+disabled = true
+
+[node name="Markerball" type="Marker2D" parent="."]
+position = Vector2(34.9669, 0)
+
+[node name="feu" type="AnimatedSprite2D" parent="."]
+position = Vector2(13.5977, -0.334333)
+rotation = 1.5708
+scale = Vector2(-0.160488, 0.136586)
+sprite_frames = SubResource("SpriteFrames_tunhc")
+animation = &"feu"
+autoplay = "feu"
+script = ExtResource("7_repa6")

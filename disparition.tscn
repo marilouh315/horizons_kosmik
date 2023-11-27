@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://btpeyml5s8xup"]
+
+[ext_resource type="Texture2D" uid="uid://g0dn0sxa8wgb" path="res://assets/Pixel Adventure 1/Free/Main Characters/Desappearing (96x96).png" id="1_ki7kd"]
+[ext_resource type="Script" path="res://disparition.gd" id="2_kodkn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62ogm"]
+atlas = ExtResource("1_ki7kd")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s57n"]
+atlas = ExtResource("1_ki7kd")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq47k"]
+atlas = ExtResource("1_ki7kd")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qse2"]
+atlas = ExtResource("1_ki7kd")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmmak"]
+atlas = ExtResource("1_ki7kd")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qvcl"]
+atlas = ExtResource("1_ki7kd")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anlks"]
+atlas = ExtResource("1_ki7kd")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecgpc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62ogm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s57n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq47k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qse2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmmak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qvcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anlks")
+}],
+"loop": false,
+"name": &"disp",
+"speed": 5.0
+}]
+
+[node name="disparition" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ecgpc")
+animation = &"disp"
+autoplay = "disp"
+script = ExtResource("2_kodkn")

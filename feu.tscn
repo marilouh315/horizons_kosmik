@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://drc2cg045s3rx"]
+
+[ext_resource type="Texture2D" uid="uid://56d073dly5n3" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_000.png" id="1_b4f4v"]
+[ext_resource type="Texture2D" uid="uid://dpd58efsh3u51" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_001.png" id="2_56fnn"]
+[ext_resource type="Texture2D" uid="uid://ng78fxuty2tx" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_002.png" id="3_23tli"]
+[ext_resource type="Texture2D" uid="uid://bhcjufqmnipw6" path="res://assets/Pixel Adventure 1/Free/Main Characters/Sprite_Fire_Shots_Shot_A_003.png" id="4_vteqi"]
+[ext_resource type="Script" path="res://feu.gd" id="5_agxyr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8wpm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b4f4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_56fnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_23tli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vteqi")
+}],
+"loop": false,
+"name": &"feu",
+"speed": 5.0
+}]
+
+[node name="feu" type="AnimatedSprite2D"]
+scale = Vector2(0.269531, 0.273438)
+sprite_frames = SubResource("SpriteFrames_e8wpm")
+animation = &"feu"
+autoplay = "feu"
+script = ExtResource("5_agxyr")

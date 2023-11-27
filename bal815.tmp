@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bscrohy8op3mu"]
+
+[ext_resource type="Texture2D" uid="uid://b5jafk2a15hmx" path="res://assets/Pixel Adventure 1/Free/Main Characters/Virtual Guy/pngegg (1).png" id="1_7vvri"]
+[ext_resource type="Script" path="res://ball.gd" id="1_8qssn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ay06"]
+size = Vector2(440.5, 15)
+
+[node name="ball" type="CharacterBody2D"]
+scale = Vector2(0.0458264, 0.123669)
+script = ExtResource("1_8qssn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -2.98023e-08)
+rotation = 0.628319
+texture = ExtResource("1_7vvri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21.75, -2)
+shape = SubResource("RectangleShape2D_0ay06")
