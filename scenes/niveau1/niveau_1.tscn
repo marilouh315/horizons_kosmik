@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://b8u8mr61ehxni" path="res://scenes/niveau1/cave_backdrop.tscn" id="1_vnub1"]
 [ext_resource type="PackedScene" uid="uid://cnj7y7flx2kfv" path="res://scenes/niveau1/tilemap.tscn" id="1_ybu2i"]
-[ext_resource type="PackedScene" uid="uid://dvpxbs1u776b3" path="res://scenes/joueur_test.tscn" id="2_6clcb"]
 [ext_resource type="Texture2D" uid="uid://bct8rcy4j80f6" path="res://assets/Tilesets/adventurePack-tileset/Assets.png" id="2_vmcfg"]
-[ext_resource type="Script" path="res://scripts/joueur_test.gd" id="3_d232f"]
-[ext_resource type="PackedScene" uid="uid://uejh2e1d5q5q" path="res://scenes/camera_2d.tscn" id="4_c1xoa"]
+[ext_resource type="PackedScene" uid="uid://b4vn1uxk1tfxc" path="res://joueur.tscn" id="5_quf4k"]
+[ext_resource type="PackedScene" uid="uid://cu8m45whufcb8" path="res://ennemi.tscn" id="6_unfgy"]
 [ext_resource type="PackedScene" uid="uid://jv41d6m66iba" path="res://scenes/niveau1/parallax_background.tscn" id="7_3ppiw"]
+[ext_resource type="PackedScene" uid="uid://b6vad0geth1ha" path="res://enmislim.tscn" id="7_06vt2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0u0hl"]
 
@@ -1039,15 +1039,14 @@ layer_0/tile_data = PackedInt32Array(524444, 393217, 8, 589980, 458753, 8, 45890
 [node name="tilemap" parent="." instance=ExtResource("1_ybu2i")]
 position = Vector2(304, 247)
 
-[node name="joueur_test" parent="." instance=ExtResource("2_6clcb")]
-position = Vector2(163, 260)
-script = ExtResource("3_d232f")
-
-[node name="Camera2D" parent="joueur_test" instance=ExtResource("4_c1xoa")]
-position = Vector2(239, -70)
-zoom = Vector2(1.7, 1.7)
-process_callback = 0
-limit_left = -95
-drag_horizontal_enabled = true
-
 [node name="ParallaxBackground" parent="." instance=ExtResource("7_3ppiw")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_quf4k")]
+position = Vector2(242, 239)
+scale = Vector2(0.733263, 0.706928)
+
+[node name="ennemi" parent="." instance=ExtResource("6_unfgy")]
+position = Vector2(611, 231)
+
+[node name="Marker2D" parent="." instance=ExtResource("7_06vt2")]
+position = Vector2(815, 212)

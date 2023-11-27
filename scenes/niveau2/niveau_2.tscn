@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dkt4vlpvggc1h" path="res://scenes/niveau2/background_niv_2.tscn" id="1_upflr"]
 [ext_resource type="PackedScene" uid="uid://martn1vlkusw" path="res://scenes/niveau2/tilemap_niv2.tscn" id="1_x7h3l"]
-[ext_resource type="PackedScene" uid="uid://dvpxbs1u776b3" path="res://scenes/joueur_test.tscn" id="3_4ndcr"]
+[ext_resource type="PackedScene" uid="uid://b4vn1uxk1tfxc" path="res://joueur.tscn" id="3_p05in"]
 
 [node name="niveau_2" type="Node"]
 
@@ -11,10 +11,5 @@
 [node name="TileMap" parent="." instance=ExtResource("1_x7h3l")]
 position = Vector2(817, 656)
 
-[node name="joueur_test" parent="." instance=ExtResource("3_4ndcr")]
-position = Vector2(365, 676)
-
-[node name="Camera2D" type="Camera2D" parent="joueur_test"]
-position = Vector2(177, -13)
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_p05in")]
+position = Vector2(452, 656)

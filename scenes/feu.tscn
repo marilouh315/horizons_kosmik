@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bajgq8bca6ttl"]
+
+[ext_resource type="Script" path="res://scenes/feu.gd" id="1_2j2gm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8wpm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"feu",
+"speed": 5.0
+}]
+
+[node name="feu" type="AnimatedSprite2D"]
+scale = Vector2(0.269531, 0.273438)
+sprite_frames = SubResource("SpriteFrames_e8wpm")
+animation = &"feu"
+autoplay = "feu"
+script = ExtResource("1_2j2gm")

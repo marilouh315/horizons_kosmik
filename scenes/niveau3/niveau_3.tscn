@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://ds3qpogy3jc54"]
+[gd_scene load_steps=3 format=3 uid="uid://ds3qpogy3jc54"]
+
+[ext_resource type="PackedScene" uid="uid://dg61kpas67lnv" path="res://scenes/niveau3/tilemap_niv3.tscn" id="1_2in2q"]
+[ext_resource type="PackedScene" uid="uid://b4vn1uxk1tfxc" path="res://joueur.tscn" id="2_u12qy"]
 
 [node name="niveau_3" type="Node"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_2in2q")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_u12qy")]
+position = Vector2(710, 286)
